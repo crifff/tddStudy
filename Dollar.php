@@ -1,16 +1,16 @@
 <?php
 
-class Doller
+class Dollar
 {
   public $amount;
 
-  public function Doller($amount=0){
+  public function Dollar($amount=0){
     $this->amount = $amount;
   }
 
   public function times($multiplier)
   {
-    return new Doller($this->amount * $multiplier);
+    return new Dollar($this->amount * $multiplier);
   }
 
   public function equals($object)

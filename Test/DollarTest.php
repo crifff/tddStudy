@@ -8,15 +8,15 @@
 //equals
 //hashcode
 
-require_once '/Users/hossy/study/tddStudy/Doller.php';
+require_once '/Users/hossy/study/tddStudy/Dollar.php';
 
-class DollerTest extends PHPUnit_Framework_TestCase
+class DollarTest extends PHPUnit_Framework_TestCase
 {
   protected $object;
 
   protected function setUp()
   {
-    $this->object = new Doller;
+    $this->object = new Dollar;
   }
 
   protected function tearDown()
@@ -25,7 +25,7 @@ class DollerTest extends PHPUnit_Framework_TestCase
 
   public function testMultiplication()
   {
-    $five = new Doller(5);
+    $five = new Dollar(5);
     $product = $five->times(2);
     $this->assertEquals(10, $product->amount);
     $product = $five->times(3);
@@ -34,9 +34,9 @@ class DollerTest extends PHPUnit_Framework_TestCase
 
   public function testEquality()
   {
-    $amount=new Doller(5);
-    $this->assertTrue($amount->equals(new Doller(5)));
-    $this->assertFalse($amount->equals(new Doller(6)));
+    $amount=new Dollar(5);
+    $this->assertTrue($amount->equals(new Dollar(5)));
+    $this->assertFalse($amount->equals(new Dollar(6)));
   }
 }
 ?>
