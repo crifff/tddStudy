@@ -2,10 +2,14 @@
 
 class Doller
 {
-  public $amount=10;
+  public $amount;
+
+  public function Doller($amount=0){
+    $this->amount = $amount;
+  }
 
   public function times($multiplier)
   {
-
+    $this->amount *= $multiplier;
   }
 }

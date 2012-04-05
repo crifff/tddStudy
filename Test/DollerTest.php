@@ -21,7 +21,7 @@ class DollerTest extends PHPUnit_Framework_TestCase
   public function testMultiplication()
   {
     $five = new Doller(5);
-    $five->times(5);
+    $five->times(2);
     $this->assertEquals(10, $five->amount);
   }
 }
