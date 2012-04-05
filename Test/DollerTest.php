@@ -4,7 +4,6 @@
 
 //レートが２：１の場合＄５＋１０CHF=$10
 //amountのプライベート化
-//Dollerの副作用
 //moneyの丸め処理
 
 require_once '/Users/hossy/study/tddStudy/Doller.php';
@@ -25,8 +24,10 @@ class DollerTest extends PHPUnit_Framework_TestCase
   public function testMultiplication()
   {
     $five = new Doller(5);
-    $five->times(2);
-    $this->assertEquals(10, $five->amount);
+    $product = $five->times(2);
+    $this->assertEquals(10, $product->amount);
+    $product = $five->times(3);
+    $this->assertEquals(15, $product->amount);
   }
 }
 ?>
