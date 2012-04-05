@@ -3,10 +3,10 @@
 //金額（１口当たりの価格）に数値（口数）をかけて金額が得られるようにする必要がある
 
 //レートが２：１の場合＄５＋１０CHF=$10
-//amountのプライベート化
 //moneyの丸め処理
-//equals
 //hashcode
+//nullとの等価性
+//オブジェクトとの等価性
 
 require_once '/Users/hossy/study/tddStudy/Dollar.php';
 
@@ -26,10 +26,8 @@ class DollarTest extends PHPUnit_Framework_TestCase
   public function testMultiplication()
   {
     $five = new Dollar(5);
-    $product = $five->times(2);
-    $this->assertEquals(10, $product->amount);
-    $product = $five->times(3);
-    $this->assertEquals(15, $product->amount);
+    $this->assertEquals(new Dollar(10), $five->times(2));
+    $this->assertEquals(new Dollar(15), $five->times(3));
   }
 
   public function testEquality()

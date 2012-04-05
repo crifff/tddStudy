@@ -2,7 +2,7 @@
 
 class Dollar
 {
-  public $amount;
+  private $amount;
 
   public function Dollar($amount=0){
     $this->amount = $amount;
