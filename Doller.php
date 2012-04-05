@@ -12,4 +12,9 @@ class Doller
   {
     return new Doller($this->amount * $multiplier);
   }
+
+  public function equals($object)
+  {
+    return $this->amount === $object->amount;
+  }
 }
